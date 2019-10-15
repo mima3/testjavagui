@@ -21,3 +21,9 @@ $RECYCLE.BIN/
 # =========================
 # Operating System Files
 # =========================
+/cs/JabTestAppVB/obj
+/cs/JabTestAppVB/bin
+/cs/JabApiLib/obj
+/cs/JabApiLib/bin
+/cs/JabApiCsharpSample/obj
+/cs/JabApiCsharpSample/bin

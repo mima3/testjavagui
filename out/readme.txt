@@ -1,0 +1,2 @@
+Java11のJavaFxを動作させる場合は以下のようにする必要がある
+C:\pleiades201904\java\11\bin\java --module-path=C:\tool\lib\javafx-sdk-11.0.2\lib\ --add-modules=javafx.controls --add-modules=javafx.swing --addmodules=javafx.base --add-modules=javafx.fxml --add-modules=javafx.media --add-modules=javafx.web -jar C:\dev\testjavagui\java\out\Java11Fx.jar
