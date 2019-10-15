@@ -21,7 +21,7 @@ namespace JabApiCsharpSample
 
             JabHelpers.AccessibleTreeItem button = javaTree.children[0].children[1].children[0].children[0].children[2].children[0];
             List<string> actionList = JabHelpers.GetAccessibleActionsList(vmID, button.acPtr);
-            Console.WriteLine("------------------------------------------------------");
+            Console.WriteLine("操作可能なアクション-------------");
             foreach (string a in actionList)
             {
                 Console.WriteLine(a);
@@ -38,14 +38,15 @@ namespace JabApiCsharpSample
             JabHelpers.DoAccessibleActions(vmID, button.acPtr, "クリック");
 
             // リストの内容
+            Console.WriteLine("リスト一覧-------------");
             javaTree = JabHelpers.GetComponentTreeByTitle("ToDoリスト", out vmID);
             JabHelpers.AccessibleTreeItem list = javaTree.children[0].children[1].children[0].children[0].children[0].children[0].children[0];
             foreach (JabHelpers.AccessibleTreeItem listitem in list.children)
             {
-                JabHelpers.DoAccessibleActions(vmID, listitem.acPtr, "クリック");
-                Console.WriteLine(listitem.name + ":clicked .... [wait]");
-                Console.ReadLine();
+                Console.WriteLine(listitem.name );
             }
+            JabHelpers.DoAccessibleActions(vmID, list.children[1].acPtr, "クリック");
+            Console.ReadLine();
         }
     }
 }
